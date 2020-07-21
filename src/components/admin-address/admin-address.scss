@@ -14,7 +14,7 @@
         font-family: $Fredericka;
         font-size: 1.5rem;
         color: $white;
-        margin-top: 3rem;
+        margin-top: 1rem;
         margin-bottom: 5rem;
 
         @include iphone {
@@ -28,7 +28,8 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        border-bottom: 1px solid darkgrey;
+        background-color: $blue;
+        margin-bottom: 0.5rem;
 
         &-item {
             text-transform: capitalize;
