@@ -36,7 +36,7 @@
       background: 0 0;
       z-index: 10;
 
-      .product_imageContainer {
+      .product__imageContainer {
         margin: 0 -5%;
         width: 110%;
         transition: all 0.4s ease;
@@ -47,14 +47,14 @@
         max-height: 10em;
       }
 
-      .product_details::after {
+      .product__details::after {
         opacity: 0.5;
       }
     }
   }
 }
 
-.product_imageContainer {
+.product__imageContainer {
   width: 100%;
   pointer-events: none;
   margin: 0;
@@ -73,7 +73,7 @@
   }
 }
 
-.product_details {
+.product__details {
   position: absolute;
   bottom: 0;
   z-index: 10;
@@ -97,7 +97,7 @@
     border-radius: 5px;
   }
 
-  .product_details_nameContainer {
+  .product__details__nameContainer {
     height: 3em;
     display: flex;
     align-items: center;
@@ -130,7 +130,7 @@
   }
 }
 
-.product_details_priceCaloriesContainer {
+.product__details__priceCaloriesContainer {
   height: 2rem;
   @include iphone() {
     height: 1em;
@@ -160,13 +160,13 @@
   }
 }
 
-.product_button {
+.product__button {
   position: absolute;
   top: 100%;
   padding: 5px;
   width: 100%;
 
-  .btn_select {
+  .btn-select {
     @include button_type;
     outline: none;
     &:hover {

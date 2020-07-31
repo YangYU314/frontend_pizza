@@ -24,20 +24,20 @@ function ItemCard(props) {
     <div className="productContainer">
       <div className="product">
         <Link className="productSelect" to={getLink()}>
-          <div className="product_imageContainer">
+          <div className="product__imageContainer">
             <img alt={props.imgAlt} src={props.imgSrc} className="image"></img>
           </div>
-          <div className="product_details">
-            <div className="product_details_nameContainer">
+          <div className="product__details">
+            <div className="product__details__nameContainer">
               <span className="name"> {props.name}</span>
             </div>
             <span className="description">{props.description}</span>
-            <div className="product_details_priceCaloriesContainer">
+            <div className="product__details__priceCaloriesContainer">
               <span className="price">From ${props.price}*</span>
               <span className="calories">{props.calories}kJ^</span>
             </div>
           </div>
-          <div className="product_button">{getButton(props)}</div>
+          <div className="product__button">{getButton(props)}</div>
         </Link>
       </div>
     </div>
@@ -46,14 +46,14 @@ function ItemCard(props) {
 
 function getButton(props) {
   if (props.pathname.startsWith("/menu")) {
-    return <button className="btn_select">SELECT</button>;
+    return <button className="btn-select">SELECT</button>;
   }
   if (props.pathname.startsWith("/receipt")) {
     if (props.id === 17) {
-      return <button className="btn_select">SELECT</button>;
+      return <button className="btn-select">SELECT</button>;
     } else {
       return (
-        <button className="btn_select" onClick={() => handleClick(props)}>
+        <button className="btn-select" onClick={() => handleClick(props)}>
           ADD
         </button>
       );

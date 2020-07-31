@@ -160,23 +160,23 @@ class AddressItem extends React.Component {
                     </span>
                 </div>
                 {this.state.dropdown &&
-                    <div className="details-dropdown">
+                    <div className="address-details-dropdown">
                         {streetName}
                     </div>
                 }
                 {this.state.editWindow && (
-                    <div className="details-editor">
-                        <div className="details-editor__close-btn-container"><p className="details-editor__close-btn"><i className="fa fa-times-circle" onClick={this.closeClick}></i></p></div>
-                        <label className="form-label details-editor__first-line" >Unit Number</label>
-                        <input id="unit" className="form-control" type="text" placeholder="Optional" onChange={this.unitChange} ></input>
-                        <label className="form-label">Street Number</label>
-                        <input id="street-num" className="form-control" type="text" onChange={this.streetNumChange}></input>
-                        <label className="form-label">Street</label>
-                        <input id="street-name" type="text" className="form-control" maxLength='40' onChange={this.streetNameChange}></input>
-                        <label className="form-label">Suburb</label>
-                        <input id="suburb" type="text" className="form-control" maxLength='20' onChange={this.suburbChange}></input>
-                        <label className="form-label">Postcode</label>
-                        <input id="postcode" type="text" className="form-control" placeholder="Optional" onChange={this.postcodeChange}></input>
+                    <div className="address-details-editor">
+                        <div className="address-details-editor__close-btn-container"><p className="address-details-editor__close-btn"><i className="fa fa-times-circle" onClick={this.closeClick}></i></p></div>
+                        <label className="address-form-label address-details-editor__first-line" >Unit Number</label>
+                        <input id="unit" className="address-form-control" type="text" placeholder="Optional" onChange={this.unitChange} ></input>
+                        <label className="address-form-label">Street Number</label>
+                        <input id="street-num" className="address-form-control" type="text" onChange={this.streetNumChange}></input>
+                        <label className="address-form-label">Street</label>
+                        <input id="street-name" type="text" className="address-form-control" maxLength='40' onChange={this.streetNameChange}></input>
+                        <label className="address-form-label">Suburb</label>
+                        <input id="suburb" type="text" className="address-form-control" maxLength='20' onChange={this.suburbChange}></input>
+                        <label className="address-form-label">Postcode</label>
+                        <input id="postcode" type="text" className="address-form-control" placeholder="Optional" onChange={this.postcodeChange}></input>
                         <button onClick={() => this.confirmUpdate(_id)}>Confirm</button>
                     </div>
                 )}
