@@ -26,7 +26,7 @@ export class GMap extends Component {
     }
     componentWillMount() {
         this.setState({ isLoading: true })
-        Geocode.setApiKey("AIzaSyACf9j--m1Bzz_dkEuQKfrgDus60tCZ-wg");
+        Geocode.setApiKey("AIzaSyACf9j--m1Bzz_dkEuQKfrgDus60tCZ-wg")
         Geocode.setLanguage("en");
         Geocode.setRegion("es");
         Geocode.enableDebug();
@@ -54,6 +54,7 @@ export class GMap extends Component {
         });
 
     render() {
+        console.log(process.env.REACT_APP_GoogleMap_API_KEY);
             return (
                 <div>
                     <div className="mapHeader">
