@@ -100,56 +100,5 @@
         color: white;
       }
     }
-
-    .popup-window {
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 30%;
-      @include ipad() {
-        width: 45%;
-      }
-      @include iphone() {
-        width: 60%;
-      }
-      padding: 3rem;
-      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
-      background: $white;
-      background: #006991;
-      border-radius: 1rem;
-      visibility: hidden;
-      opacity: 0;
-      transition: all 0.5s;
-      .closeIcon {
-        cursor: pointer;
-        position: absolute;
-        top: 2%;
-        right: 2%;
-      }
-      .content {
-        display: flex;
-        flex-direction: column;
-        .button {
-          display: flex;
-          justify-content: flex-end;
-          margin-top: 2rem;
-
-          button {
-            margin-left: 0.5rem;
-            width: 4rem;
-            height: 2.5rem;
-            border: none;
-            cursor: pointer;
-            font-family: $Abril_Fatface;
-          }
-        }
-      }
-    }
-    .show {
-      visibility: visible;
-      opacity: 1;
-      transition: all 0.5s;
-    }
   }
 }
