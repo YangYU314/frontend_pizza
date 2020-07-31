@@ -4,8 +4,9 @@
 /*font family*/
 $Fredericka: "Fredericka the Great", cursive;
 $Abril_Fatface: "Abril Fatface", cursive;
-$footer-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$footer-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
 
 /*colors*/
 $yellow: #e4ae26;
@@ -19,7 +20,11 @@ $red: #e41837;
 $redV2: #b6132c;
 $blue: #006991;
 $green: #0b9441;
-$details-background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0, rgba(0, 0, 0, 0) 100%);
+$details-background: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.65) 0,
+  rgba(0, 0, 0, 0) 100%
+);
 
 /*media query*/
 // Small tablets and large smartphones (landscape view)
@@ -28,6 +33,9 @@ $screen-small-max: 375px;
 // Small tablets (portrait view)
 $screen-medium-max: 768px;
 
+// large tablets
+$large-screen-max: 1200px;
+
 @mixin ipad() {
   @media (max-width: #{$screen-medium-max}) {
     @content;
@@ -35,6 +43,12 @@ $screen-medium-max: 768px;
 }
 @mixin iphone() {
   @media (max-width: #{$screen-small-max}) {
+    @content;
+  }
+}
+
+@mixin largeMedia {
+  @media (max-width: #{$large-screen-max}) {
     @content;
   }
 }
@@ -71,7 +85,7 @@ $screen-medium-max: 768px;
   position: relative;
 }
 
-html{
+html {
   scroll-behavior: smooth;
   font-size: 16px;
 }

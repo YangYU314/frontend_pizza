@@ -83,11 +83,17 @@
           }
         }
         img {
-          height: 4rem;
-          width: 7rem;
+          width: 80px;
+          height: 56px;
           @include iphone() {
             height: 4rem;
             width: 5.5rem;
+          }
+        }
+        p {
+          font-size: 14px;
+          @include iphone() {
+            font-size: 12px;
           }
         }
       }
@@ -174,43 +180,53 @@
       }
       .active {
         .topping-selection {
-          height: 35vh;
+          height: 30rem;
           opacity: 1;
           transition: all 0.5s;
 
           @include ipad() {
-            height: 60vh;
+            height: 50rem;
           }
         }
         .topping-expand {
           display: flex;
+          justify-content: flex-start;
           flex-wrap: wrap;
-          height: 35vh;
+          height: 30rem;
           font-size: 1.2rem;
           transition: all 0.5s;
+          padding: 1rem;
+
           @include ipad() {
-            height: 45vh;
+            height: 40rem;
           }
           @include iphone() {
             font-size: 1rem;
+            padding: 0;
           }
 
           .imgBox {
             display: flex;
             flex-direction: column;
+            width: 80px;
+            height: 56px;
+            margin: 1rem;
             @include iphone() {
               margin: 0.4rem;
             }
             img {
-              margin: 1.3rem;
+              width: 100%;
+              height: auto;
+
               cursor: pointer;
               &:hover {
                 transform: scale(1.2);
                 transition: all 0.5s;
               }
-              @include iphone() {
-                margin: 0;
-              }
+            }
+            p {
+              width: 120px;
+              text-align: center;
             }
           }
         }
@@ -220,11 +236,16 @@
   .add-to-order {
     @include button_type;
     margin: 4rem auto;
+    margin-top: 0;
     height: 4rem;
     width: 20rem;
     text-transform: uppercase;
     transition: all 0.5s;
     background-color: $red;
+    @include iphone() {
+      width: 17rem;
+      font-size: 14px;
+    }
     &:hover {
       transform: scale(1.1);
       background-color: $red;
