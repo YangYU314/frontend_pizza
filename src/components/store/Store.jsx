@@ -1,12 +1,31 @@
 import React, { useState } from "react";
 import "./store.scss";
-import StoreList from '../../components/store/store-data';
 import StoreCard from './StoreCard';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 function Store(props) {
+	let [responseData, setResponseData] = React.useState([])
+	const fetchData = React.useCallback(() => {
+		axios({
+			'method': 'GET',
+			'url': 'https://idea-pizza-backend.herokuapp.com/stores',
+		})
+			.then((response) => {
+				setResponseData(response.data)
+				console.log(response.data)
+			})
+			.catch((error) => {
+				console.log(error)
+			})
+	}, [])
+	React.useEffect(() => {
+		fetchData()
+	}, [fetchData])
+
+
 	let stores = [];
-	StoreList.forEach(item => {
+	responseData.forEach(item => {
 		item.cities.forEach(item => {
 			stores = stores.concat(item.stores)
 		})
@@ -51,7 +70,7 @@ function Store(props) {
 					BY STATE
 				</div>
 
-				{StoreList.map((item) => (<div className="storeRegion__detail" key={item.stateId}>
+				{responseData.map((item) => (<div className="storeRegion__detail" key={item.stateId}>
 					<Link to={`/store-in-state/${item.stateId}/${item.states}`}>
 						<strong>{item.states}</strong>
 					</Link>

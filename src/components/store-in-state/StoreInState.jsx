@@ -2,13 +2,33 @@ import React from "react";
 import "./store-in-state.scss";
 import StoreCard from '../store/StoreCard';
 import { Link } from "react-router-dom";
-import StoreList from '../../components/store/store-data';
+import axios from 'axios';
 
 function StoreInState(props) {
+    let [responseData, setResponseData] = React.useState([])
+	const fetchData = React.useCallback(() => {
+		axios({
+			'method': 'GET',
+			'url': 'https://idea-pizza-backend.herokuapp.com/stores',
+		})
+			.then((response) => {
+				setResponseData(response.data)
+				// console.log(response.data)
+			})
+			.catch((error) => {
+				console.log(error)
+			})
+    }, [])
+    
+	React.useEffect(() => {
+		fetchData()
+    }, [fetchData])
+    
     const stateId = props.stateId;
-    const stateList = StoreList.find(item => item.stateId === +stateId);
+    const stateList = responseData.find(item => item.stateId === +stateId);
+    console.log(stateList)
     let storesList = [];
-    stateList.cities.forEach(item => {
+    stateList && stateList.cities.forEach(item => {
         storesList.push(...item.stores)
     })
 
