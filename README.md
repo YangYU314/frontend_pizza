@@ -1,34 +1,28 @@
-<p align="center">
+<!-- <p align="center">
  <img width=150px height=150px src="./public/pizza.png" alt="Pizza logo"></a>
-</p>
+</p> -->
+![Pizza logo](./public/pizza.png)
 
-<h3 align="center">Online Pizza Order Website</h3>
-
-<div align="center">
-
+## Online Pizza Order Website
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-</div>
-
 ---
-
-<p align="center"> 🍕 A fully-functional online pizza ordering website built with <b>React.js</b>, <b>Koa.js</b> and <b>MongoDB</b>, containing customer page for customers and admin page for administrators.
-</p>
+🍕 A fully-functional online pizza ordering website built with **React.js**, **Koa.js** and **MongoDB**, containing customer page for customers and admin page for administrators.
 
 ## 📝 Table of Contents
 
-- [About](#about)
-- [Demo](#demo)
-- [How it works](#working)
-- [Getting Started](#getStart)
-- [Authors](#authors)
+- About
+- Demo
+- How it works
+- Getting Started
+- Authors
 
-## 🧐 About <a id = "about"></a>
+## 🧐 About
 
 An online pizza order website (like Domino Pizza) with the functionalities allowing customers to register, login, logout, select items and checkout and administrators to review orders.
 
-## 🎥 Demo <a id = "demo"></a>
+## 🎥 Demo
 
 ### Demo Website:
 - frontend: https://idea-tree-pizza-frontend.vercel.app/
@@ -37,33 +31,29 @@ An online pizza order website (like Domino Pizza) with the functionalities allow
 - Demo Passwords: Allen123@
 
 ### 📀 Select a Pizza
-
-<img src="./public/select.png" width="80%"/>
+![](./public/select.png)
 
 ### 💿 Login or Register 
+![](./public/customer-login.png)
 
-<img src="./public/customer-login.png" width="80%"/>
-<img src="./public/register.png" width="80%"/>
+![](./public/register.png)
 
 ### 💽 Fill up Address
-
-<img src="./public/delivery-info.png" width="80%"/>
+![](./public/delivery-info.png)
 
 ### 💿 Checkout orders
+![](./public/receipt.png)
+![](./public/checkout.png)
 
-<img src="./public/receipt.png" width="80%"/>
-<img src="./public/checkout.png" width="80%"/>
-
-## 💭 How it works <a id = "working"></a>
-
+## 💭 How it works
 - Built readable, maintainable, reusable front-end components via `React.js`, `Redux` and `React-Hooks`.
 - Used `React-Router` to ensure the Single-Page Application.
 - Used `Redux` and `React-Redux`as the state management tool to maintain global persistent states and avoid long props chain.
 - Built a `Koa.js` based backend to offer RESTful APIs functionalities and interact with the MongoDB for storing data of users and orders.
 - Used `Swagger` to build API documentation and debugging page
-- Implemented the JWT token-based Authentication to verify the user identity.
+- Implemented the `JWT` token-based Authentication to verify the user identity.
 
-## 🏁 Getting Started <a id = "getStart"></a>
+## 🏁 Getting Started
 These instructions will guide you to set up the project and run on your local machine for development and testing purposes.
 
 ### 🔧 Prerequisites
@@ -92,6 +82,5 @@ npm start
 ```
 [Backend repo](https://bitbucket.org/Michael_Guo11/idea_tree_pizza_backend/src/master/)
 
-## ✍️ Authors <a id = "authors"></a>
-
+## ✍️ Authors
 - [@Allen Xiao](https://github.com/pengfei123xiao)
