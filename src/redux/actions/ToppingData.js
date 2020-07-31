@@ -15,7 +15,7 @@ export const deleteTopping = (id) => {
 
 export const loadToppingData = () => (dispatch) => {
   dispatch(handleToppingDataRequested());
-  fetch("http://localhost:8080/toppings")
+  fetch("https://idea-pizza-backend.herokuapp.com/toppings")
     .then((res) => res.json())
     .then((res) => dispatch(handleToppingDataSucceeded(res)))
     .catch((err) => dispatch(handleToppingDataFailed(err)));

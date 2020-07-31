@@ -16,7 +16,7 @@ class PickUpForm extends React.Component {
 
         axios({
         'method': 'GET',
-        'url': 'http://localhost:8080/stores',
+        'url': 'https://idea-pizza-backend.herokuapp.com/stores',
         }).then(
         res => {
             // fanhuishuju
