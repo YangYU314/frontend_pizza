@@ -30,7 +30,6 @@ class LoginForm extends Component {
 
   getLoginInf = (e) => {
     e.preventDefault();
-    console.log("ax", axiosInstance);
     if (
       //only if the user input the username and password
       this.props.userName !== undefined &&
@@ -65,7 +64,6 @@ class LoginForm extends Component {
           }
         })
         .catch((err) => {
-          console.log("err", err);
           alert("Invalid username or password!");
         });
     }
@@ -85,7 +83,6 @@ class LoginForm extends Component {
           password: this.props.signPassword,
         },
       })
-        .then((res) => console.log("respond", res))
         .catch((err) => console.log("err", err));
     }
   }

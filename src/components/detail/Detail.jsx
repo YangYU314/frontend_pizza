@@ -14,13 +14,10 @@ class Detail extends React.Component {
 
   render() {
     const { id } = this.props.props.match.params; // this is a string type `id`
-    // console.log('this.props.props.match.params.id', typeof this.props.props.match.params.id)
-    // console.log("pizza-data", this.props.pizzaData)
 
     let foodName, foodDes, foodPrice, foodCal, imgDetail, imgAlt;
     this.props.pizzaData.forEach((item) => {
       for (let food of item.items) {
-        // console.log(food.id, +props.foodId)
         if (food.id === +id) {
           foodName = food.name;
           foodDes = food.description;
@@ -58,10 +55,7 @@ class Detail extends React.Component {
             </h1>
             <p>{foodDes}</p>
             <Link to={`/menu/detail/${id}/order-type`}>
-              <button
-              
-                onClick={() => this.props.addItem({ item: curItem })}
-              >
+              <button onClick={() => this.props.addItem({ item: curItem })}>
                 ORDER NOW
               </button>
             </Link>

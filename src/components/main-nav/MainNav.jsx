@@ -31,7 +31,6 @@ class MainNav extends React.Component {
 
   render () {
     let { status } = this.props;
-    console.log("status", status)
     const { pathname } = this.props;
 
     return (

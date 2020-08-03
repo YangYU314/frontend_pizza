@@ -6,7 +6,6 @@ const initialState = {
 }
 
 const SignUpForm =(state = initialState,action)=>{
-    console.log("action1",action)
     switch(action.type){
         case "Get_Sign_Up_Inf":
             console.log("new_action",action)

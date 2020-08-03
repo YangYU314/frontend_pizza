@@ -3,13 +3,19 @@ import { Link } from "react-router-dom";
 import "./home-page.scss";
 
 class Homepage extends React.Component {
-  state = {
-    text: "",
-    isTyping: false,
-    waitToType: [
-      "We create pizzas with quality ingredients in only five minutes",
-    ],
-  };
+  constructor(props){
+    
+    super(props);
+    this.state = {
+      text: "",
+      isTyping: false,
+      waitToType: [
+        "We create pizzas with quality ingredients in only five minutes",
+      ],
+    };
+
+  }
+
 
   typing = (index) => {
     let charCount = 0;
@@ -32,6 +38,7 @@ class Homepage extends React.Component {
   componentDidMount() {
     this.typing(0);
   }
+
 
   render() {
     return (
