@@ -63,10 +63,10 @@ const CheckOutPage = (props) => {
                 deliveryTime
                   ? `${unit} ${streetNum} ${streetName} ${suburb} ${postcode}`
                   : `${pickUpAddress} ${pickUpSuburb} ${pickUpPCode}`
-                }`}</p>
+              }`}</p>
               <p>{`Time: ${
                 deliveryTime ? `${deliveryTime}` : `${pickUpTime}`
-                }`}</p>
+              }`}</p>
             </>
           )}
         </div>
@@ -100,8 +100,6 @@ const handlePay = (props) => {
     clearStoreHistory,
     clearDeliveryForm,
   } = props;
-  console.log("==handlePay==");
-  // console.log('props.cartItems', props.cartItems)
   axiosInstance({
     method: "POST",
     url: `/order`,
@@ -118,8 +116,6 @@ const handlePay = (props) => {
     },
   })
     .then((res) => {
-      console.log("order generated.");
-      console.log("order-id", res);
       //store order into session storage if after request successful
       window.sessionStorage.setItem("OrderId", res.data.id);
     })

@@ -98,7 +98,6 @@ function OderType(props) {
 function mapStateToProps(state) {
   const { loginInf } = state;
   const { cartReducer } = state;
-  console.log("state", loginInf);
 
   return {
     status: loginInf.status,

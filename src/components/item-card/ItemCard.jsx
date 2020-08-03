@@ -5,7 +5,6 @@ import { addItem } from "../../redux/actions/cart/cartActions";
 import { Link } from "react-router-dom";
 
 function ItemCard(props) {
-  // console.log('itemcard props', props);
   function getLink() {
     if (props.pathname.startsWith("/menu" || "/receipt")) {
       if (props.id === 17) {

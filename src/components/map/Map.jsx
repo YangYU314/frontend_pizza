@@ -63,9 +63,9 @@ export class GMap extends Component {
                     <div className="mapShow">
                         <div className="mapShow__description">
                             <h1>{this.props.inMap.split(',')[1]}</h1><br/><br/>
-                            <img src={place} />{" "}<span className="mapShow__content">{this.props.inMap.split(',')[0]}</span><br/><br/>
-                            <img src={phone} />{" "}<span className="mapShow__content">{this.props.inMap.split(',')[2]}</span><br/><br/>
-                            <img src={clock} />{" "}<span className="mapShow__content">TRADING HOURS</span>
+                            <img src={place} alt="" />{" "}<span className="mapShow__content">{this.props.inMap.split(',')[0]}</span><br/><br/>
+                            <img src={phone} alt="" />{" "}<span className="mapShow__content">{this.props.inMap.split(',')[2]}</span><br/><br/>
+                            <img src={clock} alt="" />{" "}<span className="mapShow__content">TRADING HOURS</span>
                             <table>
                                 <tr>
                                     <td>MONDAY</td>

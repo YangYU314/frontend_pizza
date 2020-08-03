@@ -5,7 +5,6 @@ const initialState = {
 }
 
 const loginInf =(state = initialState,action)=>{
-    console.log("action",action)
 
     switch(action.type){
         case "Get_Username":
